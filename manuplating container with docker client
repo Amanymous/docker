@@ -1,0 +1,107 @@
+ALL DOCKER COMMANDS
+
+docker create hello-world
+//image create karega 
+docker start 6ed57177606d1a050622cb847beb548a65c049934f9a15a4ddc18ae40949e941
+
+//ye image ka address ha jo row form ma ha
+
+docker start -a 6ed57177606d1a050622cb847beb548a65c049934f9a15a4ddc18ae40949e941
+//ye image ki info show karega
+
+docker ps --all 
+//ye sari image show karega jo current movement py bani ha or ausky elawa bi
+
+docker run busybox echo hi there
+//ye hi there print karega
+
+docker start 45646asweoury
+//45646asweoury ye sirf id ko print kardeg
+
+docker start -a 45646asweoury
+//hi there (-a likhny sy aus image ma text likha tha ausko print karega) 
+
+docker start -a 45646asweoury echo bye there
+//ek hi container multiple text store nai karsakty hain
+
+docker system prune 
+//ye system ma docker ki sari iamges delete kardega or space bi batayga jo delete ki hain
+
+docker create busybox echo hi there
+411963c564271daf95cb43148609a0c54f15967b08448c028289d503546c63d2
+
+docker logs 411963c564271daf95cb43148609a0c54f15967b08448c028289d503546c63d2
+hi there
+//docker logs sy auska text print karega
+
+docker create busybox ping google.com
+
+docker start 18eb670c797b0301bb00879e81cf959cef8fdeacfb2fcf8adf38829c608e8fd9
+
+docker logs 18eb670c797b0301bb00879e81cf959cef8fdeacfb2fcf8adf38829c608e8fd9
+//ye sari images ka byte show kardega
+
+docker stop 01bb979c229e820802b70105843770f322cd487382239ecc70d784035a3c170c
+//ye container ko rogdega
+docker kill 01bb979c229e820802b70105843770f322cd487382239ecc70d784035a3c170c
+//ye container ko kill kareaga
+//kill or stop dono ek hi hain thora sy farak ha 
+
+docker run redis
+//ye redis ka server on kardega
+
+docker run redis
+//ye server download
+
+sudo apt install redis-tools
+//ye server create karega
+redis-cli
+//process
+
+sudo apt install redis-server
+//ye server install karega
+
+redis-cli
+//yahan client server ban gya ha
+>set myname aman
+OK
+>get myname
+"aman"
+docker exec -it ea3585aecb7c redis-cli
+//yahan sy redis-cli ko grab karliya or -it likhny sy organize format dega 
+>set myname 5
+OK
+>get myname
+"5"
+docker exec ea3585aecb7c redis-cli
+//yahan hum bhar agy
+
+
+
+docker run -it busybox sh
+#ls
+//directories show karega
+#echo aman
+aman
+//ye redis cli ki tarah ha 
+
+
+docker exec -it adc299c50dfe sh
+# cd ~/
+# ls
+# cd /
+# ls
+bin   data  etc   lib	 media	opt   root  sbin  sys  usr
+boot  dev   home  lib64  mnt	proc  run   srv   tmp  var
+# echo aman
+aman
+# export b=5
+# echo $b
+5
+# redis-cli
+127.0.0.1:6379> 
+//sh command processor jis ma hum redis bi use karsakty hain
+or ya sh har terminal par alag container banata ha means 2 container ki files apas ma share nai hungi
+
+
+

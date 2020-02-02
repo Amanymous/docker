@@ -1,0 +1,25 @@
+ALL COMMANDS
+
+mkdir redis-image
+cd redis-image
+docker build .
+
+docker run f862210173c7
+//ye id ha 
+
+docker run busybox
+docker build -t amanymous/redis:latest .
+//is ma dockerId:amanymous
+//is ma redis:projectname 
+//is ma latest:version ha.
+
+docker run -it alpine sh
+#apk add --update redis
+#
+
+docker commit -c 'CMD ["redis-server"]' dce154914b16 
+//is id kafi zayada character ki hogi hamain sirf sart sy f copy karna
+ha
+docker run a9776ed078df
+
+
