@@ -1,0 +1,120 @@
+docker --version
+docker version
+docker info
+docker image pull alpine:latest
+docker pull amanmirza/helloworld:latest
+docker image ls
+or
+docker images
+docker image rm alpine:latest
+//ye delete kardega is image ko
+docker images
+docker run -it amanmirza/helloworld sh
+ls 
+cd home
+ls
+exit
+docker container ls
+docker container ls -a
+docker run -it amanmirza/flag:latest sh
+docker ps
+docker ps -a
+docker exec -it hopeful_swartz sh
+docker container ls
+//to stop container 
+docker ps -a
+docker container stop 535343154a5ca
+docker container start hopeful_swartz
+docker container ls -a
+
+//removing container
+docker container rm hopeful_swartz
+//means container delete hogy ha
+docker container stop hopeful_swartz
+docker ps -a
+docker container rm hopeful_swartz
+docker ps -a
+//container in detched mode
+docker container run -d aamirpinger/flag
+docker ps
+//publishing port 
+docker container run -d -p 5010:80 aamirpinger/hellworld:latest
+docker ps
+//custom container
+docker container run -d --name docker_app -p 5020:80 aamirpinger/flag
+//containerizing app practical example
+git clone https://github.com/aamirpinger/docker-slide-code.git
+cd docker-slide-code
+ls
+cd html-js-app
+ls
+cat Dockerfile
+docker build -t first-docker-app .
+docker container run --name=first-docker-cont -d -p 8250:80 first-docker-app
+
+//another example
+cd node-js-app
+ls
+cat Dockerfile
+nano Dockerfile
+docker built -t node-app-image .
+docker container run --name=first-node-cont -d -p 8350:8080 node-app-image
+docker ps
+//pushing images
+docker images
+docker push node-app-image:latest
+docker push aamirpinger/node-app-image:latest
+docker built -t node-app-image .
+docker tag node-app-image aamirpinger/node-app-image
+//docker tag kisi app ko dosry name par bandeti ha
+docker images
+docker image push aamirpinger/node-app-image:latest
+docker run -d --name ap-node-app -p 8700:8080 aamirpinger/node-app-image
+docker ps
+docker info
+docker history node-app-image
+docker inspect node-app-image
+docker container run -it --name=test-app -v /home/maramanymous/test-app-folder:/test-app-container aamirpinger/helloworld sh
+cd test-app-container
+ls
+echo test-bind-mount-example > msg.txt
+ls
+msg.txt
+cat msg.txt
+cd /home/mramanymous/test-app-folder
+ls
+cat msg.txt
+nano msg.txt
+docker exec -it test-app sh
+ls
+cd test-app-container
+ls
+echo "helloworld new msg file" > msgnew.txt
+exit
+ls
+docker container stop test-app
+docker container rm test-app
+docker container ls
+docker run -it aamirpinger/flag -v /home/mramanymous/test-app-folder:/abcxyzfolder sh
+docker run -it --name test-app-new -v /home/mramanymous/test-app-folder:/abcxyzfolder aamirpinger/flag sh
+ls
+cd abcxyz
+ls
+cat msgnew.txt
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
