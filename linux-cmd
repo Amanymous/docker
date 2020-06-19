@@ -1,0 +1,125 @@
+touch simple.sh
+vi simple.sh
+#we have to write in file
+#!/bin/bash
+echo my first name:$1
+echo my second name:$2
+./simple.sh
+#file permission
+0 no permission
+1 executable permission
+2 write permission
+4 read permission
+#jahan file hogi wahan ye command run karni ha
+ls -l
+chmod 777 simple.sh
+#all permission are given
+./simple.sh
+./simple.sh aman mirza
+ls -l
+chmod 477 simple.sh
+#just read only permission
+uptime
+uname
+uname -srv
+man ls 
+#man kisi bi command ki ki detail batati ha
+man cd
+man ls
+man uname
+man cat
+cd ~
+#ye home directory py ly ay gi
+cd ..
+#ek step file back patr lati ha
+pwd
+#ye current working directory batayti ha
+hostname
+hostname -i
+#ye ipaddress print kardega
+date
+cal
+#for calender
+w
+#for data 
+touch myfile.txt
+#cp is for copy
+cp myfile.txt /home/maramanymous/Desktop/
+#rm stands for remove
+rm myfile.txt
+rm -r aman
+#rm -r is used to remove folder
+#move is for cut paste
+mv myfile.txt /home/mramnymous/Desktop/python
+find /home/mramanymous/Desktop/ -name "linus-cmd"
+#ager kuch return na ho to means file nai ha
+find /home/mramanymous/Desktop/ -name "python*"
+#means ager kisi folder python name ki file/folder ha to wo show kardy
+uname -a
+#ye apky cpu ki information dega
+uname -p
+lscpu
+cat /proc/cpuinfo
+df 
+#ye space batati ha
+df -h
+#for human readable form
+du
+#ye kisi specific folder ky ander ka size show karti ha
+du -s
+#ye whole directory ka size batati ha
+du -s -h
+sudo apt-get install cpuid
+#ager package ko remove karna
+sudo apt remove cpuid
+sudo apt-get-cache search python
+#ye python ky sary packages ki info dega
+cd /
+ls
+sudo useradd jone -m
+#for creating user
+sudo passwd jone
+sudo userdel jone -r
+#to delete user
+essential command
+info ls
+info cat
+#info online information lati ha
+whatis ls
+#ye abreviation batati ha
+type ls
+#ye location batati ha
+type cat
+type man
+type info
+whereis ls
+which man
+which info
+bg
+#ye background functionalities batai ha
+free 
+free -h
+ps
+#ye running process batti ha
+kill 1144
+#ye is process ko kill kardege 
+top
+#ye sari details show kardege
+reboot
+#restart
+shutdown
+#ye system ko band kardege	
+nice 
+#ye low prority programs show karti ha
+
+
+
+
+
+
+
+
+
+
+
+
